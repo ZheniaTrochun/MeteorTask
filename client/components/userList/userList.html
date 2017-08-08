@@ -1,0 +1,49 @@
+<template name="UserList">
+
+    <div class="searchBox">
+      <div class="input-field">
+        <input id="search" type="text" class="validate" name="search">
+        <label for="search">Search by username</label>
+      </div>
+
+      <div class="row serchCheckbox">
+        <div class="col s3">
+          <p>
+            <input type="checkbox" class="filled-in" id="allRoles" checked="{{allRoles}}" />
+            <label for="allRoles">All</label>
+          </p>
+        </div>
+        <div class="col s3">
+          <p>
+            <input type="checkbox" class="filled-in" id="userRole" checked="{{userRole}}" />
+            <label for="userRole">User</label>
+          </p>
+        </div>
+        <div class="col s3">
+          <p>
+            <input type="checkbox" class="filled-in" id="adminRole" checked="{{adminRole}}" />
+            <label for="adminRole">Admin</label>
+          </p>
+        </div>
+        <div class="col s3">
+          <p>
+            <input type="checkbox" class="filled-in" id="blockedRole" checked="{{blockedRole}}" />
+            <label for="blockedRole">Blocked</label>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="userListHolder">
+      {{#if currentUser}}
+        <ul class="collection">
+          {{#each users}}
+            <li class="collection-item" style="padding: 0;">{{> User}}</li>
+          {{/each}}
+        </ul>
+      <!-- {{/if}} -->
+      {{else}}
+        {{> AccessDenied}}
+      {{/if}}
+    </div>
+</template>

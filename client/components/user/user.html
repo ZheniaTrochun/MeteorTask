@@ -1,0 +1,16 @@
+<template name="User">
+  <a href="{{pathFor 'user.statistics' _id=_id}}" class="userlink">
+    <div class="container-fluid user {{#if isBlocked}}red lighten-2{{else}}{{#if isAdmin}}teal lighten-2{{/if}}{{/if}}">
+        <div class="accPicture" id="picture" style="{{image}}">
+        </div>
+      <div class="accData">
+        <b>
+          {{name}}
+        </b>
+        <p>
+          {{_id}}
+        </p>
+      </div>
+    </div>
+  </a>
+</template>

@@ -1,0 +1,45 @@
+<template name="MainLayout">
+  <div class="navbar-fixed">
+    <nav class="blue lighten-1">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Account Manager</a>
+        <ul class="right">
+          <li>{{> loginButtons}}</li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- manager -->
+  <div class="container managerHolder">
+    <div class="card">
+
+      <div class="row">
+        <div class="col m5 userList">
+          {{> UserList}}
+        </div>
+        <div class="col m7">
+          <ul id="tabs-swipe" class="tabs statisticTabs">
+            <li class="tab col s3"><a class="active" href="#userStats">User stats</a></li>
+            <li class="tab col s3"><a href="#allStats">General stats</a></li>
+          </ul>
+
+          <div id="userStats" class="col s12">
+            <div class="infoHolder">
+              {{#if currentUser}}
+                {{> Template.dynamic template=main}}
+              {{else}}
+                {{> AccessDenied}}
+              {{/if}}
+            </div>
+          </div>
+
+          <div id="allStats" class="col s12">{{> GeneralStatistics}}</div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</template>

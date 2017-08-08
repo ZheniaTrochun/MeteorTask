@@ -1,0 +1,167 @@
+/* CSS declarations go here */
+@import "{poetic:materialize-scss}/sass/materialize.scss";
+
+#login-dropdown-list {
+  left: -150px !important;
+}
+
+.login-link-text {
+  text-decoration: none !important;
+}
+
+.login-close-text {
+  text-decoration: none !important;
+}
+
+.additional-link {
+  font-size: 85% !important;
+}
+
+.login-password-form input {
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+}
+
+.accounts-dialog {
+  border: 0;
+}
+
+.login-button {
+  border: 0 !important;
+  background-color: #4db6ac !important;
+}
+
+.dropdown-toggle {
+  color: black !important;
+}
+
+.caret {
+  display: none !important;
+}
+
+.navbar {
+  border-radius: 0 !important;
+}
+
+.collection {
+  margin-left: 5px !important;
+}
+
+.managerHolder {
+  width: 70%;
+  height: 500px;
+  margin-top: 20px;
+}
+
+.managerContent {
+  padding: 0;
+}
+
+.userListHolder {
+  height: 498px;
+  overflow: auto;
+}
+
+.user {
+  display: flex;
+  padding: 5px;
+  padding-left: 15px;
+}
+
+.user p {
+  margin-bottom: 0;
+}
+
+.accPicture {
+  margin-top: 5px;
+  height: 50px;
+  width: 50px;
+  background-position: center !important;
+  background-size: cover !important;
+  margin-right: 10px;
+  border-radius: 100%;
+}
+
+.accData {
+  padding-top: 1px;
+}
+
+b {
+  display: block;
+  margin-bottom: 8px !important;
+}
+
+.infoHolder {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  height: 490px;
+}
+
+.searchHolder {
+  padding-top: 10px !important;
+}
+
+.serchCheckbox {
+  margin-bottom: 0;
+}
+
+.serchCheckbox p {
+  margin-top: 15px;
+}
+
+.searchBox {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.error {
+  text-align: center;
+  color: grey;
+  padding-top: 200px;
+}
+
+.userlink {
+  color: #333 !important;
+}
+
+.userStatistics {
+  margin-top: 68px;
+  margin-right: 15px;
+}
+
+.admin {
+  background-color: lightblue;
+}
+
+.blocked {
+  background-color: red;
+}
+
+.modal {
+  width: 40% !important;
+}
+
+.controllButtons {
+  margin-top: 20px;
+}
+
+.statisticTabs {
+  margin-top: 34px;
+}
+
+.indicator {
+  background-color: #2196f3 !important;
+}
+
+.tab a {
+  color: #2196f3 !important;
+}
+
+.close {
+  font-style: normal;
+  text-transform: capitalize;
+  cursor: pointer;
+}
