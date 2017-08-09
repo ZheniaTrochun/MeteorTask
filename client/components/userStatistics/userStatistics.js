@@ -19,7 +19,8 @@ Template.UserStatistics.helpers({
   },
 
   email(){
-    if (Meteor.users.findOne(FlowRouter.getParam('_id')).emails) {
+    if (Users.findOne(FlowRouter.getParam('_id'))
+        && Users.findOne(FlowRouter.getParam('_id')).emails) {
       return Users.findOne(FlowRouter.getParam('_id')).emails[0].address;
     }
 
@@ -31,11 +32,15 @@ Template.UserStatistics.helpers({
   },
 
   createdAt() {
-    return Users.findOne(FlowRouter.getParam('_id')).createdAt;
+    if (Users.findOne(FlowRouter.getParam('_id'))) {
+      return Users.findOne(FlowRouter.getParam('_id')).createdAt;
+    }
   },
 
   roles() {
-    return Users.findOne(FlowRouter.getParam('_id')).roles;
+    if (Users.findOne(FlowRouter.getParam('_id'))) {
+      return Users.findOne(FlowRouter.getParam('_id')).roles;
+    }
   }
 });
 

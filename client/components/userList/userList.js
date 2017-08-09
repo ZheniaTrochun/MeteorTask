@@ -37,8 +37,11 @@ Template.UserList.events({
 
 Template.UserList.helpers({
   users() {
-    return Meteor.users.find({}).fetch().filter((u) => (u.emails[0].address.indexOf(Template.instance().state.get('nameTemplate')) != -1)
-              && (Template.instance().state.get(getRole(u)) || Template.instance().state.get('all')) );
+    const users = Meteor.users.find({}).fetch();
+    if (users) {
+      return users.filter((u) => (u.emails[0].address.indexOf(Template.instance().state.get('nameTemplate')) != -1)
+        && (Template.instance().state.get(getRole(u)) || Template.instance().state.get('all')) );
+    }
   },
 
   allRoles() {

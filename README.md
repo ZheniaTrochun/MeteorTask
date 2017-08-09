@@ -2,6 +2,6 @@ for launch application, you need `meteor` you can install it on the official sit
 
 run `meteor` command by terminal in project root
 
-to login as admin: email: admin@admin.com, pass: 123123
+to login as admin: email: admin@admin.com
 
 enjoy :)

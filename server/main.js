@@ -70,6 +70,11 @@ Meteor.startup(() => {
 });
 
 Accounts.onCreateUser(function(options, user) {
-  user.roles = ['user'];
+  if (user.emails && user.emails[0].address == 'admin@admin.com') {
+    user.roles = ['admin'];
+  } else {
+    user.roles = ['user'];
+  }
+  
   return user;
 });
