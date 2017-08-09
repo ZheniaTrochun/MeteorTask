@@ -1,7 +1,7 @@
 import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
 import getUsername from '../../../utils/getUsername.js';
-
+import checkPermissions from '../../../utils/checkPermissions.js';
 
 const Users = Meteor.users;
 
@@ -46,8 +46,7 @@ Template.UserStatistics.helpers({
 
 Template.UserStatistics.events({
   'click .delete'(event) {
-    if (!Meteor.userId() || !Roles.userIsInRole(Meteor.userId(), 'admin')
-          || Roles.userIsInRole(Meteor.userId(), 'blocked')) {
+    if (checkPermissions(Meteor.userId())) {
 
       MaterializeModal.error({message: 'Access Denied'});
     } else {
@@ -75,8 +74,7 @@ Template.UserStatistics.events({
   },
 
   'click #addRole'(event) {
-    if (!Meteor.userId() || !Roles.userIsInRole(Meteor.userId(), 'admin')
-          || Roles.userIsInRole(Meteor.userId(), 'blocked')) {
+    if (checkPermissions(Meteor.userId())) {
 
       MaterializeModal.error({message: 'Access Denied'});
     } else {
@@ -93,8 +91,7 @@ Template.UserStatistics.events({
 
   'click .close'(event) {
     event.preventDefault();
-    if (!Meteor.userId() || !Roles.userIsInRole(Meteor.userId(), 'admin')
-          || Roles.userIsInRole(Meteor.userId(), 'blocked')) {
+    if (checkPermissions(Meteor.userId())) {
 
       MaterializeModal.error({message: 'Access Denied'});
     } else {
@@ -113,8 +110,7 @@ Template.UserStatistics.events({
   },
 
   'click .unlock'(event) {
-    if (!Meteor.userId() || !Roles.userIsInRole(Meteor.userId(), 'admin')
-          || Roles.userIsInRole(Meteor.userId(), 'blocked')) {
+    if (checkPermissions(Meteor.userId())) {
 
       MaterializeModal.error({message: 'Access Denied'});
     } else {

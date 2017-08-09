@@ -51,8 +51,6 @@ Meteor.startup(() => {
       roles.splice(roles.indexOf(role), 1);
 
       Roles.setUserRoles(id, roles);
-
-      console.log(roles);
     },
 
     'users.setName'(id, text) {
@@ -75,6 +73,6 @@ Accounts.onCreateUser(function(options, user) {
   } else {
     user.roles = ['user'];
   }
-  
+
   return user;
 });
