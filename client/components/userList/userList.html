@@ -17,8 +17,8 @@
         {{#each role in roles}}
           <div class="col s3">
             <p>
-              <input type="checkbox" class="filled-in role" id="{{role}}" checked="{{role}}" />
-              <label for="userRole">{{role}}</label>
+              <input type="checkbox" class="filled-in roleCheckbox" id="{{role}}" />
+              <label for="{{role}}">{{role}}</label>
             </p>
           </div>
         {{/each}}
