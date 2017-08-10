@@ -1,5 +1,4 @@
 import { ReactiveDict } from 'meteor/reactive-dict';
-import getRole from '../../../utils/getRole.js';
 
 
 Template.UserList.onCreated(function userListOnCreated() {
